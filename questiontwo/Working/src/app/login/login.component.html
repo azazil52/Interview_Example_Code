@@ -1,0 +1,41 @@
+
+<div class="login-page" [@fadeInCenterAnimation]>
+    <div class="master-form">
+        <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register($event)">
+            <div class="email_info">
+                <input type="text" formControlName="email" placeholder="Email Address" [ngClass]="{'has-error': !registerForm.controls['email'].valid}" required/>
+                <span class="emailHelp">Enter a valid email</span>
+            </div>
+            <div class="username_info">
+                <input type="text" formControlName="username" placeholder="Username" [ngClass]="{'has-error': !registerForm.controls['username'].valid}" required/>
+                <span class="userNameHelp">The Username can be no longer than 15 characters long</span>
+            </div>
+            <div class="pass_info">
+                <input type="password" formControlName="pass" class="password" placeholder="Password" [ngClass]="{'has-error': !validAndMatching()}" required/>
+                <span class="passwordHelp">Password must contain an upper case and lower case character and a number</span>
+            </div>
+            <div class="confirm_pass_info">
+                <input type="password" formControlName="cPass" placeholder="Confirm Password" [ngClass]="{'has-error': !validAndMatching()}" required/>
+                <span class="confirmPasswordHelp">Password must be the same as the one above</span>
+            </div>
+
+            <button type="submit" [disabled]="false">
+                <div *ngIf="loading"><i class="fa fa-spinner fa-spin"></i> Loading</div>
+                <div *ngIf="!loading">Create</div>
+            </button>
+
+            <p class="message">Already registered? <a (click)="expandRegistration()">Sign In</a></p>
+            
+        </form>
+
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login($event)">
+            <input type="text" name="login_email" placeholder="Email" formControlName="email" required/>
+            <input type="password" name="login_password" placeholder="Password" formControlName="pass" required/>
+            <button type="submit" id="login_btn" disabled>
+                <div *ngIf="loading"><i class="fa fa-spinner fa-spin"></i> Logging in...</div>
+                <div *ngIf="!loading">login</div>
+            </button>
+            <p class="message">Not registered? <a (click)="expandRegistration()">Create an account</a></p>
+        </form>
+    </div>
+</div>
