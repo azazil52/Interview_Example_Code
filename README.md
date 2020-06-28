@@ -5,4 +5,4 @@ Question 1
 -   Postman was used to send the JSON requests but any program that can send a json request through post will work
 
 Question 2
--   Question 2 was completed using angular and can be run by the command <ng serve> while in the root of the questiontwo folder
+-   Question 2 was completed using angular and can be run by the command <ng serve> while in the folder titled "Working" of the questiontwo folder
