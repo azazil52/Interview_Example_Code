@@ -7,3 +7,4 @@ Question 1
 
 Question 2
 -   Question 2 was completed using angular and can be run by the command <ng serve> while in the folder titled "Working" of the questiontwo folder
+-   This is a working example of a loggin page. Meant to show basic understanding of the angular programming language and show some css work 
