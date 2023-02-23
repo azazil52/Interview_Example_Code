@@ -8,3 +8,4 @@ Question 1
 Question 2
 -   Question 2 was completed using angular and can be run by the command <ng serve> while in the folder titled "Working" of the questiontwo folder
 -   This is a working example of a loggin page. Meant to show basic understanding of the angular programming language and show some css work 
+-   Focus of this question is the creation of login page and registration not necessarily error handling but that can be implemented if asked. 
